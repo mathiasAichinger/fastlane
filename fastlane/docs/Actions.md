@@ -1335,6 +1335,16 @@ update_project_team(
 )
 ```
 
+### update_project_automatic_codesigning
+This action allows you to modify the "Automatically manage signing" (Xcode 8) flag in your project. This may be useful if you want to use automatic codesigning for development and the manual one for CI.
+
+```ruby
+update_project_automatic_codesigning(
+  path: "Example.xcodeproj",
+  use_automatic_signing: false
+)
+```
+
 ## update_info_plist
 
 This action allows you to modify your `Info.plist` file before building. This may be useful if you want a separate build for alpha, beta or nightly builds, but don't want a separate target.
