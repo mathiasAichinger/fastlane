@@ -146,6 +146,7 @@ module Gym
 
             # Alerting user to explicitly specify a mapping if cannot be determined
             next if bundle_identifiers_with_duplicates.empty?
+            UI.error("test")
             UI.error("Couldn't automatically detect the provisioning profile mapping")
             UI.error("There were multiple profiles for bundle identifier(s): #{bundle_identifiers_with_duplicates.uniq.join(', ')}")
             UI.error("You need to provide an explicit mapping of what provisioning")
